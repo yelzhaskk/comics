@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import Hero from './components/Hero/Hero';
+import Comics from './components/Comics/Comics';
+import { 
+  BrowserRouter,
+  Routes, 
+  Route
+} from 'react-router-dom';
+import Layout from './components/Layout';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props){
+     super(props);
+     this.state = {}
+  }
+  render(){
+    return (
+      <div className="wrapper">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index path="/" element={<Hero />} />
+              <Route path="comics/:id" element={<Comics />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </div>
+    )
+  }
 }
 
 export default App;

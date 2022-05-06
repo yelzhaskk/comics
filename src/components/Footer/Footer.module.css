@@ -1,0 +1,32 @@
+.wrapper {
+   background-color: #151515;
+   position: absolute;
+   width: 100%;
+   bottom: 0;
+   z-index: 5;
+}
+
+.inner {
+   max-width: 1240px;
+   width: 100%;
+   margin: 0 auto;
+   padding: 20px;
+   display: flex;
+   justify-content: center;
+   gap: 25px;
+   flex-wrap: nowrap;
+}
+
+.linkContainer {
+   list-style: none;
+}
+
+.link {
+   text-transform: uppercase;
+   cursor: pointer;
+   color: rgb(196, 192, 192);
+}
+
+.link:hover {
+   color: white;
+}

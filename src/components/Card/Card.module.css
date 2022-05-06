@@ -1,0 +1,23 @@
+.wrapper {
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   gap: 20px;
+}
+
+.wrapper:hover{
+   background-color: rgb(177, 174, 174);
+   cursor: pointer;
+}
+
+.image {
+   width: 282px;
+   height: 400px;
+   border-radius: 3px;
+   cursor: pointer;
+   position: relative;
+}
+
+p {
+   color: black;
+}
